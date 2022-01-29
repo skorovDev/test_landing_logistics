@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Team 1(command work)</title>
+    <title>Introducing Localli</title>
 
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -30,22 +30,23 @@
                         <a class="nav-link btn" href='#howwork'>How it works</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link btn" data-toggle="modal" data-target="#staticBackdrop">Pricing</a>
+                        <a class="nav-link btn" data-target="#staticBackdrop" data-toggle="modal">Pricing</a>
                     </li>
                     <li class="nav-item ">
-                        <button class="btn black" data-toggle="modal" data-target="#exampleModal">Request Beta</button>
+                        <button class="btn black" data-target="#exampleModal" data-toggle="modal">Request Beta</button>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
-         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-backdrop="static"
+         data-keyboard="false"
+         id="staticBackdrop" tabindex="-1">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticBackdropLabel">Pricing</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -70,7 +71,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
@@ -79,7 +80,6 @@
 
 </header>
 
-<!--друга секція початок-->
 <section>
     <div class="container">
         <div class="row">
@@ -93,17 +93,15 @@
                 </div>
                 <div class="row text-center p-3 ">
                     <div class="col-6 ">
-                        <button class="btn black" data-toggle="modal" data-target="#exampleModal">Request Beta</button>
+                        <button class="btn black" data-target="#exampleModal" data-toggle="modal">Request Beta</button>
                     </div>
                     <div class="col-6 "><a class="nav-link btn" href='#howwork'>How it works</a>
                     </div>
                 </div>
             </div>
-            <!--            <div class="col-sm-3"></div>-->
         </div>
     </div>
 </section>
-<!--друга секція кінець-->
 
 <section>
     <div class="container">
@@ -127,11 +125,8 @@
     </div>
 </section>
 
-<!--#8 Section (Localli operates a network)-->
 <div class="container">
-    <p class="above_h1 text-center pt-3">
-        Introducing Localli
-    </p>
+    <p class="above_h1 text-center pt-3"> Introducing Localli</p>
     <div class="row h1">Localli operates a network of micro-fulfilment spaces across the country in major cities, down
         to your nearest neighborhood.
     </div>
@@ -140,7 +135,6 @@
     </div>
 </div>
 
-<!--#9-->
 <section class="bg_cont my-5 s-9" id="howwork">
     <div class="container">
         <div class="row justify-content-center my-5">
@@ -153,8 +147,6 @@
 
     <div class="container">
         <div class="row justify-content-center flex-md-wrap">
-
-
             <div class="col-sm-12 col-md-4   flex-wrap ">
                 <div class="text-center">
                     <img alt="small_logo" src="img/small_logo.png">
@@ -190,7 +182,6 @@
     </div>
 </section>
 
-<!--feature#10 Section (Custom Branded Tracking Page.)-->
 <div class="container">
     <div class="row pt-3 pb-3">
         <div class="col-sm-6 d-flex flex-column justify-content-center">
@@ -200,7 +191,7 @@
                 track your sales generated from the tracking page in our beautiful
                 dashboard.
             </p>
-            <button class="btn black align-self-lg-start" data-toggle="modal" data-target="#exampleModal">Request Beta
+            <button class="btn black align-self-lg-start" data-target="#exampleModal" data-toggle="modal">Request Beta
             </button>
         </div>
         <div class="col-sm-6 text-center pt-3 pb-3">
@@ -209,7 +200,6 @@
     </div>
 </div>
 
-<!--#11 Section (Affordable delivery without the wait.)-->
 <section class="bg_cont">
     <div class="container">
         <div class="row pt-3 pb-3">
@@ -225,10 +215,7 @@
         </div>
     </div>
 </section>
-<!--end #11 Section (Affordable delivery without the wait.)-->
 
-
-<!--12-- start-->
 <div class="container my-5" id="map">
     <div class="row section-1 justify-content-center ">
         <div class="row h1 text-center text-nowrap"></div>
@@ -244,7 +231,6 @@
     </div>
 </div>
 
-<!--13-- start-->
 <section>
     <div class="container">
         <div class="row">
@@ -292,7 +278,6 @@
     </div>
 </section>
 
-<!--14-- start-->
 <section class="my-5">
     <div class="container">
         <div class="bg_end">
@@ -305,33 +290,32 @@
                         in as
                         little as 2-hours. As we expand, so do you.
                     </div>
-                    <button class="btn black" data-toggle="modal" data-target="#exampleModal">Request Beta</button>
+                    <button class="btn black" data-target="#exampleModal" data-toggle="modal">Request Beta</button>
                 </div>
 
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
+                <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal"
+                     tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Request Beta</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body text-center">
                                 <h2>Enter your mail and we will respond you asap:</h2>
-                                <input type="text" name="Mail"
-                                       placeholder="Email address" size="50">
+                                <input name="Mail" placeholder="Email address"
+                                       size="50" type="text">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn black">Send Request</button>
+                                <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                                <button class="btn black" type="button">Send Request</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="col-md-6 padding flex-wrap my-5">
                     <div class="text-center ">
@@ -342,9 +326,7 @@
         </div>
     </div>
 </section>
-<!--14--end-->
 
-<!--15--start-->
 <footer>
     <div class="container my-5 border_top1">
         <div class="d-flex my-5 justify-content-between ">
@@ -383,17 +365,10 @@
         </div>
     </div>
 </footer>
-<!--15--end-->
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-        crossorigin="anonymous"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

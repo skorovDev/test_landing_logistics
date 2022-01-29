@@ -1,0 +1,23 @@
+{
+  "name": "logistics_landing_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitaliiChernelivskyi/logistics_landing_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitaliiChernelivskyi/logistics_landing_test/issues"
+  },
+  "homepage": "https://github.com/VitaliiChernelivskyi/logistics_landing_test#readme",
+  "dependencies": {
+    "bootstrap": "4.6"
+  }
+}
