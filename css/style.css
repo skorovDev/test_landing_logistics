@@ -148,9 +148,42 @@ h1 {
 
 @media screen and (max-width: 768px) {
 
+
+    h1 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .faq {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .order-first {
         -ms-flex-order: 1;
         order: 1;
     }
 
+    .mobile {
+        text-align: center;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+
+    }
+
+    .footer-left {
+        margin-bottom: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right {
+
+    }
+    .navbar{
+        margin-bottom: 20px;
+        padding: 0.5rem 0;
+    }
 }
