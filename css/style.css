@@ -61,6 +61,8 @@ p {
 
 .man {
     margin-top: 40px;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
@@ -121,6 +123,8 @@ h1 {
 .act, .faq:hover {
     background-color: #FAFAFA;
 }
+
+
 
 .answer {
     max-height: 0;
