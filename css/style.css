@@ -101,6 +101,11 @@ h1 {
     outline: none;
 }
 
+.bg-solid {
+    border-bottom: 0 solid;
+
+}
+
 .faq::after {
     content: url('../img/faq_arrow.svg');
     float: right;
@@ -160,7 +165,8 @@ footer > div {
         margin-bottom: 20px;
         padding: 0.5rem 0;
     }
-    .modal-body input{
+
+    .modal-body input {
         width: 100%;
     }
 }
