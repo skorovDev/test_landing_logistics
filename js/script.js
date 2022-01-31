@@ -28,6 +28,11 @@ $.validator.addMethod("lettersonly", function (value, element) {
     return this.optional(element) || /^[a-zA-Z]$/i.test(value);
 }, "Letters and spaces only please");
 
+$.validator.addMethod("letterNumber", function (value, element) {
+    return this.optional(element) || /^[a-zA-Z 0-9 -,.]$/i.test(value);
+}, "Letters and  0-9 -,");
+
+
 $("#formValidation").validate({
     rules: {
         name: {
@@ -40,12 +45,9 @@ $("#formValidation").validate({
         },
         comment: {
             required: true,
+            letterNumber: true
         }
     },
-    messages: {
-        required: 'qqqq'
-    },
-
     submitHandler: function (form) {
         alert('send')
         // form.submit();

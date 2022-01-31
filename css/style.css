@@ -85,7 +85,8 @@ h1 {
 .bg_cont {
     background: #FAFAFA;
 }
-.modal-footer{
+
+.modal-footer {
     border-top: 0;
 }
 
@@ -132,7 +133,8 @@ h1 {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 }
-label.error{
+
+label.error {
     color: red;
 }
 
