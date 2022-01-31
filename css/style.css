@@ -59,10 +59,10 @@ p {
     padding-left: 45px;
 }
 
+
 .man {
     margin-top: 40px;
-    width: 100%;
-    height: 100%;
+
 }
 
 h1 {
@@ -84,6 +84,9 @@ h1 {
 
 .bg_cont {
     background: #FAFAFA;
+}
+.modal-footer{
+    border-top: 0;
 }
 
 .bg_end {
