@@ -24,29 +24,30 @@ for (let anchor of anchors) {
     })
 }
 
+$.validator.addMethod("lettersonly", function (value, element) {
+    return this.optional(element) || /^[a-zA-Z]$/i.test(value);
+}, "Letters and spaces only please");
+
 $("#formValidation").validate({
     rules: {
         name: {
-           required: true
+            required: true,
+            lettersonly: true
         },
         email: {
+            required: true,
             email: true
         },
-        message: {
-            name: {
-                required: "We need your email address to contact you",
-                minlength: "Name at least 2 characters"
-            },
-
-            email:"Please enter your email"
-
-        },
-
-
+        comment: {
+            required: true,
+        }
+    },
+    messages: {
+        required: 'qqqq'
     },
 
-
     submitHandler: function (form) {
-        form.submit();
+        alert('send')
+        // form.submit();
     }
 });
