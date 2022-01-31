@@ -321,29 +321,31 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body text-center">
-                                <div class="form-group">
-                                    <label for="email">Enter your info:</label>
-                                    <input type="email" placeholder="Email address" class="form-control"
-                                           id="email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Name" class="form-control"
-                                           id="name">
-                                </div>
-                                <div class="form-group">
+                            <form name="FormValidator" id="formValidation" action="index.html">
+                                <div class="modal-body text-center">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Name" class="form-control"
+                                               id="name">
+                                    </div>
+                                    <div class="form-group">
+
+                                        <input type="email" placeholder="Email address" class="form-control"
+                                               id="email">
+                                    </div>
+                                    <div class="form-group">
                                     <textarea id="comment" rows="3" placeholder="Comment"
                                               class="form-control"></textarea>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
+
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                                <button class="btn black" type="button">Send Request</button>
+                                <button class="btn black" type="button">Send</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6 padding flex-wrap my-5">
                     <div class="text-center ">
                         <img alt="cooperation" src="img/cooperation.png">
@@ -394,6 +396,7 @@
 </footer>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>

@@ -23,3 +23,30 @@ for (let anchor of anchors) {
         })
     })
 }
+
+$("#formValidation").validate({
+    rules: {
+        name: {
+           required: true
+        },
+        email: {
+            email: true
+        },
+        message: {
+            name: {
+                required: "We need your email address to contact you",
+                minlength: "Name at least 2 characters"
+            },
+
+            email:"Please enter your email"
+
+        },
+
+
+    },
+
+
+    submitHandler: function (form) {
+        form.submit();
+    }
+});

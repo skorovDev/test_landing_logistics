@@ -132,6 +132,9 @@ h1 {
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 }
+label.error{
+    color: red;
+}
 
 footer > div {
     border-top: 1px solid #E5E5E5;
