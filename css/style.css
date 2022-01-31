@@ -160,4 +160,7 @@ footer > div {
         margin-bottom: 20px;
         padding: 0.5rem 0;
     }
+    .modal-body input{
+        width: 100%;
+    }
 }
