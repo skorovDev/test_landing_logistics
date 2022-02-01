@@ -48,7 +48,7 @@ a {
 .mark {
     width: 18px;
     height: 13px;
-    align-self: center;
+    margin: 5px;
 }
 
 p {
