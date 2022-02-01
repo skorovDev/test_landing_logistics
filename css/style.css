@@ -3,8 +3,15 @@ body {
     font-size: 16px;
 }
 
+
 a {
     color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 1px solid;
 }
 
 img {
@@ -51,6 +58,7 @@ a {
     margin: 5px;
 }
 
+err
 p {
     margin-top: 12px;
 }
