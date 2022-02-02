@@ -38,6 +38,30 @@ a.logo {
 
 }
 
+.triple-form-br-1 {
+    border-top: 1px solid #E4E4E4;
+}
+
+.triple-form {
+    background: #FFFFFF;
+    border-radius: 7px 7px 7px 7px;
+    border: 1px solid #E4E4E4;
+    padding: 5px;
+
+
+}
+
+.triple-form-btn {
+    width: 100%;
+    background: #000000;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    color: #FFFFFF;
+    border-radius: 7px 7px 7px 7px;
+    min-height: 60px;
+
+}
+
 img {
     max-width: 100%;
 }
@@ -114,12 +138,6 @@ header .navbar .navbar-nav a.nav-link {
     margin: 0 0 0 10px;
 }
 
-.btn.black {
-    background: #000000;
-    box-sizing: border-box;
-    border: 2px solid #000000;
-    color: #FFFFFF;
-}
 
 a {
     color: #000000;
