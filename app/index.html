@@ -4,7 +4,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta charset="UTF-8">
     <title>Introducing Localli</title>
-
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -250,40 +249,56 @@
                     <!--                        <div>-->
                     <!--                            <input id="contactChoice1" name="contact"-->
                     <!--                                   type="radio" value="email">-->
-                    <!--                            <label for="contactChoice1">Standard</label>-->
+                    <!--                            <label for="contactChoice1"></label>-->
                     <!--                        </div>-->
                     <!--                        <div>-->
-                    <!--                            <span class="p-2">Free</span>-->
+                    <!--                            -->
                     <!--                        </div>-->
                     <!--                    </div>-->
+                    <div class="d-flex  flex-row">
+                        <label for="contactChoice1">
+                            <div>
+                                <input id="contactChoice1" name="contact" type="radio" value="email">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <p>Standard</p>
+                                </div>
+
+                                <div><span class="p-2">Free</span></div>
+                            </div>
+                        </label>
+                    </div>
                     <div class="d-flex triple-form-br-1 justify-content-between">
                         <label for="contactChoice2">
                             <div>
                                 <input id="contactChoice2" name="contact" type="radio" value="email">
                             </div>
                             <div class="d-flex justify-content-center">
-                                <div>
-                                    <p>тут текст</p>
-                                    <p>і тут текст</p>
+                                <div class="d-flex">
+                                    <p>Expedited</p>
                                 </div>
 
-                                <div>тут ціна</div>
+                                <div><span>8.90</span></div>
                             </div>
                         </label>
                     </div>
-                    <!--                    <div class="d-flex triple-form-br-1 p-1 justify-content-between">-->
-                    <!--                        <div>-->
-                    <!--                            <input type="radio" id="contactChoice3"-->
-                    <!--                                   name="contact" value="email">-->
-                    <!--                            <label for="contactChoice3">Delivery with LocalliDelivery with Localli-->
-                    <!--                            </label>-->
-                    <!--                            <div class="above_h1">Delivered within a couple of hours</div>-->
-                    <!--                        </div>-->
-                    <!--                        <div>-->
-                    <!--                            <span class="p-2">$12.00</span>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
+                    <div class="d-flex triple-form-br-1 ">
+                        <label class=" flex-row" for="contactChoice3">
+                            <div>
+                                <input id="contactChoice3" name="contact" type="radio" value="email">
+                            </div>
+                            <div class="d-flex flex-row ">
+                                <div class="">
+                                    <p> Delivery with Localli Delivery with Localli
+                                    </p>
+                                    <p class="above_h1">Delivered within a couple of hours</p>
+                                </div>
 
+                                <div><span class="p-2">$12.00</span></div>
+                            </div>
+                        </label>
+                    </div>
                 </div>
                 <button class="triple-form-btn btn my-3 hvr-ripple-out-big  black" data-target="#exampleModal">
                     Continue to payment
