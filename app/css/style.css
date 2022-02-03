@@ -333,6 +333,10 @@ li.nav-item {
 }
 
 @media screen and (max-width: 768px) {
+
+    .btn-text{
+        color: #212529;    }
+
     h1 {
         font-size: 2rem;
         line-height: 3rem;
