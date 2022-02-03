@@ -210,6 +210,9 @@ h1 {
     color: #000000;
 }
 
+/*TODO: example class*/
+.text-color-gray{}
+
 .above_h1 {
     font-size: 1rem;
     color: #A6A6A6;
