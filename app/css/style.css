@@ -3,6 +3,7 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
+    color: #212529;
 }
 
 
@@ -29,6 +30,7 @@ a.logo {
     background: #FFFFFF;
 
 }
+
 
 .border-double-form {
     display: flex;
@@ -210,8 +212,10 @@ h1 {
     color: #000000;
 }
 
-/*TODO: example class*/
-.text-color-gray{}
+.text-color-gray {
+    color: #A6A6A6;
+    font-size: 14px;
+}
 
 .above_h1 {
     font-size: 1rem;
