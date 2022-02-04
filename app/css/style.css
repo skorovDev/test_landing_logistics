@@ -18,6 +18,12 @@ a:hover {
     border-bottom: 1px solid;
 }
 
+
+img {
+    max-width: 100%;
+}
+
+/*-------------------*/
 a.logo {
     text-decoration: none;
     border-bottom: 0;
@@ -28,9 +34,7 @@ a.logo {
     border: 1px solid #E4E4E4;
     padding: 5px;
     background: #FFFFFF;
-
 }
-
 
 .border-double-form {
     display: flex;
@@ -39,7 +43,6 @@ a.logo {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 .triple-form-br-1 {
@@ -49,33 +52,95 @@ a.logo {
 .triple-form {
     background: #FFFFFF;
     border-radius: 7px 7px 7px 7px;
-    border: 1px solid #E4E4E4;
-    padding: 5px;
-
-
 }
 
-button.triple-form-btn {
+.btn.triple-form-btn {
     width: 100%;
-    background: #000000;
-    box-sizing: border-box;
-    border: 2px solid #000000;
-    color: #FFFFFF;
-    border-radius: 7px 7px 7px 7px;
-    min-height: 60px;
-
+    border-radius: 7px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
+.triple-form input {
+    visibility: hidden;
+    position: absolute;
+}
 
-img {
-    max-width: 100%;
+.triple-form .triple-form-checkbox {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #E4E4E4;
+    transition: 0.2s;
+}
+
+.triple-form .triple-form-checkbox::before {
+    content: '';
+    background-color: #fff;
+    border: 1px solid #eee;
+    width: 10px;
+    height: 10px;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 50%;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.triple-form .triple-form-item {
+    position: relative;
+}
+
+.triple-form .triple-form-item:hover label {
+    box-shadow: 0 3px 8px -4px #000;
+    z-index: 1;
+}
+
+.triple-form label {
+    padding: 5px;
+    cursor: pointer;
+    margin: 0;
+    min-height: 55px;
+    border: 1px solid #E4E4E4;
+    border-bottom: none;
+    transition: box-shadow 0.2s;
+}
+
+.triple-form label:hover {
+    z-index: 1;
+}
+
+.triple-form .triple-form-item:first-child label {
+    border-radius: 5px 5px 0 0;
+}
+
+.triple-form .triple-form-item:last-child label {
+    border-bottom: 1px solid #E4E4E4;
+    border-radius: 0 0 5px 5px;
+}
+
+.triple-form input:checked + label {
+    border-color: #000;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #000 !important;
+}
+
+.triple-form input:checked + label .triple-form-checkbox {
+    background-color: #000;
+}
+
+.triple-form input:checked + label .triple-form-checkbox::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .shopping-hed {
     border-bottom: 1px solid #E4E4E4;
     border-top: 1px solid #E4E4E4;
     width: 100%;
-
 }
 
 .shopping-hed p img {
@@ -96,24 +161,11 @@ img {
     color: #FFFFFF;
 }
 
-
-@keyframes hvr-ripple-out {
-    100% {
-        top: -12px;
-        right: -12px;
-        bottom: -12px;
-        left: -12px;
-        opacity: 0;
-    }
-}
-
 .hvr-ripple-out {
     display: inline-block;
     vertical-align: middle;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
+    box-shadow: 0 0 1px #000;
     backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
     position: relative;
 }
 
@@ -126,50 +178,34 @@ img {
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
 
 .hvr-ripple-out:hover:before, .hvr-ripple-out:focus {
-    -webkit-animation-name: hvr-ripple-out;
     animation-name: hvr-ripple-out;
-}
-
-@keyframes hvr-ripple-out-big {
-    100% {
-        top: -12px;
-        right: -12px;
-        bottom: -12px;
-        left: -12px;
-        opacity: 0;
-    }
 }
 
 .hvr-ripple-out-big {
     display: inline-block;
     vertical-align: middle;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
+    box-shadow: 0 0 1px #000;
     backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
     position: relative;
 }
 
 .hvr-ripple-out-big:before {
     content: '';
     position: absolute;
-    border: 2px solid #000000;
+    border: 2px solid #000;
     top: 0;
     border-radius: 7px 7px 7px 7px;
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
 
 .hvr-ripple-out-big:hover:before, .hvr-ripple-out-big:focus {
-    -webkit-animation-name: hvr-ripple-out-big;
     animation-name: hvr-ripple-out-big;
 }
 
@@ -179,11 +215,6 @@ header.navbar {
 
 header .navbar .navbar-nav a.nav-link {
     margin: 0 0 0 10px;
-}
-
-
-a {
-    color: #000000;
 }
 
 .mark {
@@ -200,10 +231,8 @@ p {
     padding-left: 45px;
 }
 
-
 .man {
     margin-top: 40px;
-
 }
 
 h1 {
@@ -255,7 +284,6 @@ h1 {
 
 .bg-solid {
     border-bottom: 0 solid;
-
 }
 
 .faq::after {
@@ -290,7 +318,6 @@ label.error {
     box-shadow: 3px 3px 3px #aaaaaa;
     margin-top: 10px;
     width: 40%;
-
 }
 
 label.error:before {
@@ -300,19 +327,15 @@ label.error:before {
     border-bottom: 10px solid #e20909;
     position: absolute;
     top: -10px;
-
-
 }
 
 input.form-control.error {
     border: 1px solid #e81414;
-
 }
 
 textarea.form-control.error {
     border: 1px solid #e81414;
 }
-
 
 footer > div {
     border-top: 1px solid #E5E5E5;
@@ -320,12 +343,10 @@ footer > div {
 
 .navbar-nav {
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 0;
     list-style: none;
     align-items: center;
-
 }
 
 li.nav-item {
@@ -334,8 +355,9 @@ li.nav-item {
 
 @media screen and (max-width: 768px) {
 
-    .btn-text{
-        color: #212529;    }
+    .btn-text {
+        color: #212529;
+    }
 
     h1 {
         font-size: 2rem;
@@ -380,4 +402,22 @@ li.nav-item {
 }
 
 
+@keyframes hvr-ripple-out-big {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
 
+@keyframes hvr-ripple-out {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
