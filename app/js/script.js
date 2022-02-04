@@ -24,6 +24,11 @@ for (let anchor of anchors) {
     })
 }
 
+$('#exampleModal').on('shown.bs.modal', function() {
+    $('#name').focus();
+})
+
+
 $.validator.addMethod("lettersonly", function (value, element) {
     return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
 }, "Letters and spaces only please");

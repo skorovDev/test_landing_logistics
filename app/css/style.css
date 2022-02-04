@@ -311,13 +311,14 @@ h1 {
 label.error {
     color: #FFFFFF;
     background: #e20909 !important;
-    padding: 10px !important;
+    padding: 5px !important;
     border-radius: 10px !important;
     position: absolute;
     left: 15px;
     box-shadow: 3px 3px 3px #aaaaaa;
     margin-top: 10px;
-    width: 40%;
+    width: auto;
+    font-size: 14px;
 }
 
 label.error:before {
@@ -326,7 +327,7 @@ label.error:before {
     border-right: 10px solid transparent;
     border-bottom: 10px solid #e20909;
     position: absolute;
-    top: -10px;
+    top: -8px;
 }
 
 input.form-control.error {
@@ -395,6 +396,7 @@ li.nav-item {
     .modal-body input {
         width: 100%;
     }
+
 
     label.error {
         width: 70%
