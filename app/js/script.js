@@ -13,6 +13,7 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
+// TODO for pc scroll
 const anchors = document.querySelectorAll('a.anchor')
 for (let anchor of anchors) {
     anchor.addEventListener("click", function (e) {
@@ -24,11 +25,13 @@ for (let anchor of anchors) {
         })
     })
 }
+// TODO for ios scroll
+const scroll = new SmoothScroll('a.anchor');
+
 
 $('#exampleModal').on('shown.bs.modal', function () {
     $('#name').focus();
 })
-
 
 $.validator.addMethod("lettersonly", function (value, element) {
     return this.optional(element) || /^[a-zA-Z]+$/i.test(value);
@@ -60,4 +63,3 @@ $("#formValidation").validate({
     }
 });
 
-const scroll = new SmoothScroll('a.anchor');
