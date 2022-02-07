@@ -21,7 +21,8 @@
   "dependencies": {
     "bootstrap": "4.6",
     "jquery": "^3.6.0",
-    "jquery-validation": "^1.19.3"
+    "jquery-validation": "^1.19.3",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
