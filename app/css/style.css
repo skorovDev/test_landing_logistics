@@ -4,6 +4,8 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     color: #212529;
+    overflow-y: scroll; /* также может быть auto */
+    -webkit-overflow-scrolling: touch;
 }
 
 
