@@ -12,23 +12,6 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-
-// TODO for pc scroll
-const anchors = document.querySelectorAll('a.anchor')
-for (let anchor of anchors) {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault()
-        const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
-        document.querySelector(goto).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        })
-    })
-}
-// TODO for ios scroll
-const scroll = new SmoothScroll('a.anchor');
-
-
 $('#exampleModal').on('shown.bs.modal', function () {
     $('#name').focus();
 })
@@ -63,3 +46,40 @@ $("#formValidation").validate({
     }
 });
 
+$("#change-1").click(function () {
+    $('div#message').each(function () {
+
+        $(this).replaceWith("<form id='my-form' class='form-valid'><input name=\"email\" placeholder=\"jon@mail.com\" class='manFl'> <button id='done'>Send</button></frorm>");
+
+    });
+
+});
+
+$( "#my-form" ).validate({
+    rules: {
+        email: {
+            required: true,
+            email: true,
+            remote: "check-email.php"
+        }
+    },
+    submitHandler: function (form) {
+        alert('send')
+        // form.submit();
+    }
+});
+
+// TODO for pc scroll
+const anchors = document.querySelectorAll('a.anchor')
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault()
+        const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+        document.querySelector(goto).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}
+// TODO for ios scroll
+const scroll = new SmoothScroll('a.anchor');
