@@ -24,7 +24,7 @@ for (let anchor of anchors) {
     })
 }
 
-$('#exampleModal').on('shown.bs.modal', function() {
+$('#exampleModal').on('shown.bs.modal', function () {
     $('#name').focus();
 })
 

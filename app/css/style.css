@@ -22,11 +22,13 @@ a:hover {
 img {
     max-width: 100%;
 }
-.shopping-hed .pictures-v{
+
+.shopping-hed .pictures-v {
     width: 15px;
     height: 10px;
 
 }
+
 /*-------------------*/
 a.logo {
     text-decoration: none;
@@ -156,9 +158,24 @@ a.logo {
     border-radius: 25px;
     line-height: 19px;
     font-size: 1rem;
+    outline: none;
 }
 
-.btn-change{
+.btn:focus {
+    box-shadow: none;
+}
+
+.border-btn {
+    border: 1px solid #fff;
+    border-radius: 25px;
+
+}
+
+.border-btn:hover {
+    border: 1px solid #000000;
+}
+
+.btn-change {
     background-color: white;
     color: black;
     border: 2px solid #fff;
