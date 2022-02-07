@@ -22,7 +22,11 @@ a:hover {
 img {
     max-width: 100%;
 }
+.shopping-hed .pictures-v{
+    width: 15px;
+    height: 10px;
 
+}
 /*-------------------*/
 a.logo {
     text-decoration: none;
@@ -41,8 +45,8 @@ a.logo {
     align-items: center;
     border-top: 1px solid #E4E4E4;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .triple-form-br-1 {
@@ -153,6 +157,13 @@ a.logo {
     line-height: 19px;
     font-size: 1rem;
 }
+
+.btn-change{
+    background-color: white;
+    color: black;
+    border: 2px solid #fff;
+}
+
 
 .btn.black {
     background: #000000;
