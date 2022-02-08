@@ -339,6 +339,11 @@ h1 {
 
 .double-form label.error {
     margin-top: 40px;
+    max-width: 60%;
+}
+
+.double-form input {
+    width: 100%;
 }
 
 label.error {
@@ -436,7 +441,11 @@ li.nav-item {
     label.error {
         width: 70%
     }
-}
+
+    .double-form label.error {
+        max-width: 40%;
+    }
+}¬
 
 
 @keyframes hvr-ripple-out-big {

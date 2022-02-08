@@ -54,7 +54,7 @@ jQuery.validator.addMethod("customEmail", function (value, element) {
 $("#change-1").click(function () {
     $('div#message').each(function () {
 
-        $(this).replaceWith(`<form  id='my-form' class='valid-my'><input name="email" value="jon@mail.com" class='error-valid'> <button class='btn ' type="submit">Send</button></frorm>`);
+        $(this).replaceWith(`<form  id='my-form' class='d-flex justify-content-between flex-nowrap valid-my'><input name="email" value="jon@mail.com" class='ml-2 error-valid'> <button class='btn' type="submit">Save</button></frorm>`);
         $("#my-form").validate({
             rules: {
                 email: {
@@ -75,19 +75,24 @@ $("#change-1").click(function () {
 $("#change-2").click(function () {
     $('div #message-1').each(function () {
 
-        $(this).replaceWith(`<form  id='my-form-1' class='valid-my'><input name="address" value="" > <button class='btn' type="submit">Send</button></frorm>`);
+        $(this).replaceWith(`<form  id='my-form-1' class='d-flex justify-content-between flex-nowrap valid-my'><input class="ml-2" id="form_save" name="address" value="" > <button class='btn' id="save" type="submit">Save</button></frorm>`);
         $("#my-form-1").validate({
             rules: {
                 address: {
                     required: true,
                 }
             },
-            submitHandler: function (form) {
-                alert('ok')
-                // form.submit();
-            }
+
+
+        });
+        $(function () {
+            $('#save').click(function () {
+                let text = $('#form_save').val();
+                $('message-1').text(text);
+            });
         });
     });
+
 
 });
 
