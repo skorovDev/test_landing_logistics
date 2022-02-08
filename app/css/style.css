@@ -190,6 +190,26 @@ a.logo {
     color: #FFFFFF;
 }
 
+.double-form-change:hover {
+    color: #000000;
+    border-bottom: 1px solid;
+}
+
+.double-form-save {
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.double-form-change {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 1px #FFF;
+}
+
 .hvr-ripple-out {
     display: inline-block;
     vertical-align: middle;
@@ -340,6 +360,7 @@ h1 {
 .double-form label.error {
     margin-top: 40px;
     max-width: 60%;
+    margin-left: 12px;
 }
 
 .double-form input {
@@ -445,7 +466,7 @@ li.nav-item {
     .double-form label.error {
         max-width: 40%;
     }
-}¬
+}
 
 
 @keyframes hvr-ripple-out-big {

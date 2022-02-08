@@ -84,7 +84,7 @@ $('.double-form-item').each(function () {
         const form = $(`
             <form class='double-form-change_form d-flex justify-content-between flex-nowrap'>
                 <input class="ml-2" type="${type}" id="form_save" name="${name}" value="${value}" > 
-                <button class='btn black' id="save" type="submit">Save</button>
+                <button class='btn black double-form-save' id="save" type="submit">Save</button>
             </frorm>
             `)
 
@@ -93,16 +93,14 @@ $('.double-form-item').each(function () {
         const rules = {
             [name]: {
                 required: true,
-                // email: true
+                email: true
             }
         }
-        debugger
 
         //TODO якщо type === `email` -> підставити в rules[name][type] = true
 
         // rules[name] = true
 
-        console.log(rules)
 
         $(form).validate({
             rules,
@@ -113,8 +111,8 @@ $('.double-form-item').each(function () {
             //         //    TODO: with type (example "email: true")
             //     }
             // },
+
             submitHandler: function (form) {
-                debugger
                 form.replaceWith(div)
                 // alert('send')
                 // form.submit();
