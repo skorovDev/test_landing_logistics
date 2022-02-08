@@ -85,12 +85,17 @@ $("#change-2").click(function () {
 
 
         });
-        $(function () {
-            $('#save').click(function () {
-                let text = $('#form_save').val();
-                $('message-1').text(text);
-            });
+
+        // $(
+        //     function () {
+        $('#save').click(function () {
+            let text = $('#form_save').val();
+            $('message-1').text(text);
         });
+        // }
+        // );
+
+
     });
 
 
