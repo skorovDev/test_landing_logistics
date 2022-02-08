@@ -337,6 +337,10 @@ h1 {
     transition: max-height 0.5s ease-out;
 }
 
+.double-form label.error {
+    margin-top: 40px;
+}
+
 label.error {
     color: #FFFFFF;
     background: #e20909 !important;
@@ -383,6 +387,7 @@ footer > div {
 li.nav-item {
     padding: 10px;
 }
+
 
 @media screen and (max-width: 768px) {
 

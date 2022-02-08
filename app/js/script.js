@@ -46,28 +46,51 @@ $("#formValidation").validate({
     }
 });
 
+jQuery.validator.addMethod("customEmail", function (value, element) {
+    return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i.test(value);
+}, "Please enter valid email address!");
+
+
 $("#change-1").click(function () {
     $('div#message').each(function () {
 
-        $(this).replaceWith("<form id='my-form' class='form-valid'><input name=\"email\" placeholder=\"jon@mail.com\" class='manFl'> <button id='done'>Send</button></frorm>");
-
+        $(this).replaceWith(`<form  id='my-form' class='valid-my'><input name="email" value="jon@mail.com" class='error-valid'> <button class='btn ' type="submit">Send</button></frorm>`);
+        $("#my-form").validate({
+            rules: {
+                email: {
+                    required: true,
+                    customEmail: true
+                }
+            },
+            submitHandler: function (form) {
+                alert('ok')
+                // form.submit();
+            }
+        });
     });
 
 });
 
-$( "#my-form" ).validate({
-    rules: {
-        email: {
-            required: true,
-            email: true,
-            remote: "check-email.php"
-        }
-    },
-    submitHandler: function (form) {
-        alert('send')
-        // form.submit();
-    }
+
+$("#change-2").click(function () {
+    $('div #message-1').each(function () {
+
+        $(this).replaceWith(`<form  id='my-form-1' class='valid-my'><input name="address" value="" > <button class='btn' type="submit">Send</button></frorm>`);
+        $("#my-form-1").validate({
+            rules: {
+                address: {
+                    required: true,
+                }
+            },
+            submitHandler: function (form) {
+                alert('ok')
+                // form.submit();
+            }
+        });
+    });
+
 });
+
 
 // TODO for pc scroll
 const anchors = document.querySelectorAll('a.anchor')
