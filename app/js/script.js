@@ -42,7 +42,6 @@ $("#formValidation").validate({
     },
     submitHandler: function (form) {
         alert('send')
-        // form.submit();
     }
 });
 
@@ -51,102 +50,51 @@ jQuery.validator.addMethod("customEmail", function (value, element) {
 }, "Please enter valid email address!");
 
 
-// $("#change-1").click(function () {
-//     $('div#message').each(function () {
-//
-//         $(this).replaceWith(`<form  id='my-form' class='d-flex justify-content-between flex-nowrap valid-my'><input name="email" value="jon@mail.com" class='ml-2 error-valid'> <button class='btn' type="submit">Save</button></frorm>`);
-//         $("#my-form").validate({
-//             rules: {
-//                 email: {
-//                     required: true,
-//                     customEmail: true
-//                 }
-//             },
-//             submitHandler: function (form) {
-//                 alert('ok')
-//                 // form.submit();
-//             }
-//         });
-//     });
-//
-// });
-
-
-// $("#change-2").click(function () {
 $('.double-form-item').each(function () {
     const _this = this
     $(this).find('button.double-form-change').click(function () {
-        // console.log(_this)
+
         const div = $(_this).find('.double-form-text')
         const type = div.attr('data-type')
         const name = div.attr('data-name')
         const value = div.text()
         const form = $(`
-            <form class='double-form-change_form d-flex justify-content-between flex-nowrap'>
-                <input class="ml-2" type="${type}" id="form_save" name="${name}" value="${value}" > 
-                <button class='btn black double-form-save' id="save" type="submit">Save</button>
+            <form class='double-form-change_form d-flex mb-3 justify-content-between flex-nowrap'>
+                <input class="ml-2 focus_input" type="${type}" name="${name}" value="${value}" > 
+                <button class='btn black double-form-save ' type="submit">Save</button>
             </frorm>
             `)
 
         div.replaceWith(form);
 
+        form.ready(function () {
+            form.find('.focus_input').focus();
+        });
+
         const rules = {
             [name]: {
                 required: true,
-                email: true
+                // email: true
             }
         }
+        if (type === 'email') {
+            rules[name][type] = true
+        }
 
-        //TODO якщо type === `email` -> підставити в rules[name][type] = true
-
-        // rules[name] = true
-
-
-        $(form).validate({
+        form.validate({
             rules,
-            // rules: {
-            //     blabla: {
-            //         required: true,
-            //         // email: true
-            //         //    TODO: with type (example "email: true")
-            //     }
-            // },
-
             submitHandler: function (form) {
-                form.replaceWith(div)
-                // alert('send')
-                // form.submit();
+                const value = $(form).find('input').val()
+                div.text(value)
+                $(form).replaceWith(`<div class="ml-2 double-form-text" data-type="${type}" data-name="${name}">${value}</div>`)
+
             }
 
         });
 
     })
 
-    // $(this).replaceWith(`<form  id='my-form-1' class='d-flex justify-content-between flex-nowrap valid-my'><input class="ml-2" id="form_save" name="address" value="" > <button class='btn' id="save" type="submit">Save</button></frorm>`);
-    // $("#my-form-1").validate({
-    //     rules: {
-    //         address: {
-    //             required: true,
-    //         }
-    //     },
-    //
-    //
-    // });
-    //
-    // // $(
-    // //     function () {
-    // $('#save').click(function () {
-    //     let text = $('#form_save').val();
-    //     $('message-1').text(text);
-    // });
-    // }
-    // );
-
-
 });
-
-
-// });
 
 
 // TODO for pc scroll
