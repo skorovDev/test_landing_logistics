@@ -80,7 +80,6 @@ $('.double-form-item').each(function () {
         if (type === 'email') {
             rules[name][type] = true
         }
-
         form.validate({
             rules,
             submitHandler: function (form) {
@@ -95,7 +94,6 @@ $('.double-form-item').each(function () {
     })
 
 });
-
 
 // TODO for pc scroll
 const anchors = document.querySelectorAll('a.anchor')
